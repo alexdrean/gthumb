@@ -5784,7 +5784,7 @@ gth_browser_viewer_key_press_cb (GthBrowser  *browser,
 		case GDK_KEY_Right:
 		case GDK_KEY_Page_Down:
 		case GDK_KEY_KP_Page_Down:
-		case GDK_KEY_space:
+		//case GDK_KEY_space:
 			gth_browser_show_next_image (browser, FALSE, FALSE);
 			return TRUE;
 

@@ -5731,7 +5731,7 @@ gth_browser_viewer_scroll_event_cb (GthBrowser     *browser,
 	if (event->state & GDK_SHIFT_MASK)
 		return FALSE;
 
-	if (event->state & GDK_CONTROL_MASK)
+	//if (event->state & GDK_CONTROL_MASK)
 		return FALSE;
 
 	if ((event->direction != GDK_SCROLL_UP) && (event->direction != GDK_SCROLL_DOWN))
@@ -5774,12 +5774,14 @@ gth_browser_viewer_key_press_cb (GthBrowser  *browser,
 	modifiers = gtk_accelerator_get_default_mod_mask ();
 	if ((event->state & modifiers) == 0) {
 		switch (event->keyval) {
+		case GDK_KEY_Left:
 		case GDK_KEY_Page_Up:
 		case GDK_KEY_KP_Page_Up:
 		case GDK_KEY_BackSpace:
 			gth_browser_show_prev_image (browser, FALSE, FALSE);
 			return TRUE;
 
+		case GDK_KEY_Right:
 		case GDK_KEY_Page_Down:
 		case GDK_KEY_KP_Page_Down:
 		case GDK_KEY_space:
